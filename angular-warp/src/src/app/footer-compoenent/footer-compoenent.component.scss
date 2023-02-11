@@ -1,0 +1,23 @@
+
+.footer_position{
+
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    border-style: outset;
+    align-items: center;
+    height: 3%;
+    border-radius: 1px;
+    background-color: rgb(146, 144, 144);
+    color: black;
+    cursor: pointer;
+
+    &:hover{
+     color: white;
+     text-shadow: 2px 2px 4px #000000;
+    }
+
+}
