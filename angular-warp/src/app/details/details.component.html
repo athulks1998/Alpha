@@ -1,0 +1,14 @@
+<div class="details-box">
+    <div class ="header-section">
+    <span class ="header">Passwords</span>
+    <p class="close-button">X</p>
+    </div>
+    <div class="description"> 
+        {{descriptionData}}
+    </div>
+    <div class="bullet-section">
+        <div class="bullet-data" *ngFor="let data of bulletData">
+            - {{data}}
+        </div>
+    </div>
+</div>
