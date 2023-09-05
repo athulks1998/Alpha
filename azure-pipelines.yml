@@ -22,7 +22,7 @@ steps:
 
 - script: |
     cd alpha
-    ng build --prod
+    ng build 
   displayName: 'Build Angular App'
 
 - task: CopyFiles@2
