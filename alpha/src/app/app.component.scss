@@ -1,13 +1,7 @@
 .height-container {
-    height:94vh;
+    height:100%;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
-
-@font-face {
-    font-family: lato;
-    src: url(../assets/font/SF-Pro.dmg) format("opentype");
-  }
-
 
   /* Overriding PrimeNG toast styles */
 .p-toast {
