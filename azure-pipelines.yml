@@ -1,5 +1,5 @@
 trigger:
-- main  
+- master  
 
 pool:
   vmImage: 'windows-latest'  
@@ -21,7 +21,7 @@ steps:
   displayName: 'install Angular App Dependencies'
 
 - script: |
-    cd portfolio
+    cd alpha
     ng build --prod
   displayName: 'Build Angular App'
 
