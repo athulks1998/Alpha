@@ -1,0 +1,39 @@
+trigger:
+- master  
+
+pool:
+  vmImage: 'windows-latest'  
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '16.x'  
+  displayName: 'Install Node.js'
+
+- script: |
+    cd alpha
+    npm install -g @angular/cli 
+  displayName: 'Install Angular CLI'
+
+- script: |
+    cd alpha
+    npm install --legacy-peer-deps
+  displayName: 'install Angular App Dependencies'
+
+- script: |
+    cd alpha
+    ng build --configuration production
+  displayName: 'Build Angular App'
+
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: '$(System.DefaultWorkingDirectory)/alpha/dist'  
+    contents: '**'
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
+  displayName: 'Copy built files'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: 'Alpha'
+  displayName: 'Publish Artifact'
