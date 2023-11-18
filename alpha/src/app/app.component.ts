@@ -16,5 +16,5 @@ export class AppComponent implements OnInit {
    this.route.navigate(['login']);
 
   }
-  title = 'angular-usermanagement';
+  title = 'Alphateq';
 }

@@ -1,0 +1,92 @@
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 65px;
+    // background-color: #333;
+    background: linear-gradient(to right, #30303a, #000000);
+    color: #fff;
+
+
+}
+
+
+.container {
+    text-align: center;
+    height: 100%;
+
+    .content {
+        
+        height: 100%;
+
+        .icon-split{
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .icon-button {
+            padding: 3px;
+           
+
+            .tooltip {
+                visibility: hidden;
+            }
+        }
+
+        .bottom-margin{
+           margin-bottom: 100px;
+        }
+
+        .icon-button:hover {
+    
+            background: linear-gradient(to right, #22222b, #040303);
+            padding: 1px;
+            /* Adjust padding as needed */
+            border: 1px solid transparent;
+            /* Transparent border to make room for the 3D effect */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            /* Adjust the shadow properties for the 3D effect */
+            outline: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+
+            .tooltip {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            margin-top: 20px;
+
+        }
+
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 10px;
+        }
+
+        ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
+
+.welcome-footer {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    right: 40%;
+    bottom: 0%;
+  }

@@ -15,6 +15,7 @@ import { MessageService } from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoaderComponent } from './loader-component/loader-component.component';
 import { DetailsComponent } from './details/details.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 
 
@@ -28,7 +29,8 @@ const routes: Routes = [
     FooterComponent,
     DashboardsComponent,
     LoaderComponent,
-    DetailsComponent
+    DetailsComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,

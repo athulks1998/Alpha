@@ -1,0 +1,30 @@
+<div class="sidebar">
+    <div class="container">
+        <div class="content">
+            <div class="image-container">
+                <img src="assets/images/a-icon.svg" height="100%" (mouseover)="rotateImage()" (mouseout)="rotateImage()"
+                    [ngClass]="{'rotate': isImageRotated}">
+
+            </div>
+            <ul class="icon-split">
+                <div>
+                <li><a href="#">
+                        <div class="icon-button"><img src="assets/images/user-icon.svg" height="100%">
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="icon-button"><img src="assets/images/collection-icon.svg" height="100%">
+                        </div>
+                    </a></li>
+               </div>
+                <div>
+                <li class="bottom-margin"><a href="#"><div class="icon-button "><img src="assets/images/settings-icon.svg" height="100%">
+                </div></a></li>
+            </div>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer class="welcome-footer">
+    <p>&copy; 2023 Alphateq. All Rights Reserved.</p>
+  </footer>
