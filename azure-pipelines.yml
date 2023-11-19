@@ -32,6 +32,14 @@ steps:
     targetFolder: '$(Build.ArtifactStagingDirectory)'
   displayName: 'Copy built files'
 
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker Hub Registry'
+    repository: 'alpha'
+    command: 'buildAndPush'
+    tags: 'latest'
+    Dockerfile: '**/Dockerfile'
+
 - task: PublishBuildArtifacts@1
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)'
