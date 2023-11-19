@@ -2,7 +2,7 @@ trigger:
 - master  
 
 pool:
-  vmImage: 'windows-latest'  
+  vmImage: 'ubuntu-latest'  
 
 steps:
 - task: NodeTool@0
@@ -19,6 +19,14 @@ steps:
     cd alpha
     npm install --legacy-peer-deps
   displayName: 'install Angular App Dependencies'
+  
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker Hub Registry'
+    repository: 'alpha'
+    command: 'buildAndPush'
+    tags: 'latest'
+    Dockerfile: '**/Dockerfile'
 
 - script: |
     cd alpha
@@ -32,13 +40,7 @@ steps:
     targetFolder: '$(Build.ArtifactStagingDirectory)'
   displayName: 'Copy built files'
 
-- task: Docker@2
-  inputs:
-    containerRegistry: 'Docker Hub Registry'
-    repository: 'alpha'
-    command: 'buildAndPush'
-    tags: 'latest'
-    Dockerfile: '**/Dockerfile'
+
 
 - task: PublishBuildArtifacts@1
   inputs:
